@@ -169,6 +169,11 @@ nav{
     background-color: blue;
     animation: animFilm 5s;
     z-index: 1;
+    background-image: url(../../../assets/wallpaperflare.com_wallpaper\ \(1\).jpg);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    
 }
 
 .part_anime2{
