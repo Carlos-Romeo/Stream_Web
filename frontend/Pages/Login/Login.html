@@ -3,39 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./Login.css">
+    <link rel="stylesheet" href="./login.css">
+    <title>Login</title>
 </head>
 <body>
-    <main>
-        <section class="Block">
-            <section class="Block1">
-                <h2>Login</h2>
-            </section>
-            <form class="Block2">
-                <table>
-                    <tbody>
-                       <tr>
-                        <td>
-                            <label for="e-mail">email</label><br>
-                            <input type="email" id="e-mail">
-                        </td>
-                       </tr><br>
-                       <tr>
-                        <td>
-                            <label for="MotDePasse">Mot de passe</label><br>
-                            <input type="password" id="MotDePasse">
-                        </td>
-                       </tr>
-                    </tbody>
-                </table>
-            </form><br>
-            <section>
-                <button type="submit">Soumettre</button>
-            </section>
-        </section>
 
-    </main>
+    <main>
+        <section class="container">
+
+            <section class="content">
+
+                
+                <h1>LOGIN</h1>
+
+                <form id = "form">
+
+                    <section class="content_input">
+
+                        <section class="input_email">
+                            <input type="text" class="email" placeholder="Your Email" required>
+                            <label for="email" class="email_label">Enter Email</label>
+                            <span class="input_light"></span>
+                        </section>
+                        <br>
+                        <section class="input_pwd">
+                            <input type="text" class="pwd" placeholder="Your Password" required>
+                            <label for="pwd" class="pwd_label">Enter Password</label>
+                            <span class="input_hight"></span>
+                        </section>
     
+                    </section>
+    
+                    <section class="btn"> 
+                        <button type="submit"  id="sub"><a href="../Acceuil/Acceuil.html"> Login</a></button>
+                    </section>
+                    
+                    <p>Have you an account? <a href="../Sign_up/signup.html">Create account</a></p>
+    
+                </form>
+
+            </section>
+            
+        </section>
+    </main>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const submitBtn = document.getElementById('sub');
+        
+            submitBtn.addEventListener('click', function () {
+                // Récupérer les valeurs des champs de formulaire
+                let inputMail = document.querySelector(".email").value;
+                let inputPassword = document.querySelector(".pwd").value;
+            
+                // Effectuer une requête AJAX pour enregistrer les données dans la base de données
+                const xhr = new XMLHttpRequest();
+                xhr.open('POST', 'http://localhost:3000/user/login');
+                xhr.setRequestHeader('Content-Type', 'application/json');
+            
+                const data = {
+                    email: inputMail,
+                    password: inputPassword
+                };
+            
+                xhr.send(JSON.stringify(data));
+            
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 2 && xhr.status === 200) {
+                        console.log('Enregistrement réussi !');
+                    }
+                };
+            });
+        });
+
+
+
+
+
+
+
+
+/*         const form = document.getElementById('form'); 
+        form.addEventListener('submit', function(e) {
+
+          e.preventDefault();
+
+          let infoLogin = { name: inputName.value, password: inputPassword.value };
+          console.log(infoLogin);
+
+          fetch('http://localhost:3000/user/login', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(infoLogin)
+          })
+            .then(response => response.json())
+            .then(data => {
+              console.log(data);
+            })
+            .catch(error => {
+              console.error(error);
+            });
+        }) */
+
+
+
+
+
+    </script>
 </body>
 </html>

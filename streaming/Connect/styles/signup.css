@@ -23,11 +23,9 @@ body{
 .content{
     background-color: black;
     color: white;
-    padding: 60px;
+    padding: 3px;
     border-radius: 10px;
 }
-
-
 
 h1{
     text-align: center;
@@ -36,15 +34,18 @@ h1{
 }
 
 
-.input_email{
+
+.input_pseudo{
     position: relative;
-    margin-bottom: 8px;
+    margin-bottom: 2px;
+    margin-left: 50px;
 }
-.email{
+.pseudo{
     display: block;
-    width: 100%;
+    width: 90%;
     color: white;
-    padding: 10px;
+    padding: 8px;
+    margin: 10px;
     font-size: 14px;
     border: none;
     border-bottom: 2px solid #ccc;
@@ -52,7 +53,7 @@ h1{
     background-color: transparent;
     color: #ccc; 
 }
-.email_label{
+.pseudo_label{
     position: absolute;
     top: 0;
     left: 0;
@@ -70,13 +71,61 @@ h1{
     background-color: rgb(252, 79, 79);
     transition: all 0.3s ease;
 }
+.pseudo:focus + .pseudo_label{
+    top: -10px;
+    font-size: 14px;
+    color:rgb(252, 79, 79) ;
+}
+.pseudo:focus + .pseudo_label + .input_light{
+    width: 95%;
+}
+
+
+
+
+.input_email{
+    position: relative;
+    margin-top: 2px;
+    margin-left: 50px;
+}
+.email{
+    display: block;
+    width: 90%;
+    color: white;
+    padding: 8px;
+    margin: 10px;
+    font-size: 14px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    background-color: transparent;
+    color: #ccc;
+}
+.email_label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    color: rgba(204, 204, 204, 0);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.input_eight{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: rgb(252, 79, 79);
+    transition: all 0.3s ease;
+}
 .email:focus + .email_label{
     top: -10px;
     font-size: 14px;
     color:rgb(252, 79, 79) ;
 }
-.email:focus + .email_label + .input_light{
-    width: 105%;
+.email:focus + .email_label + .input_eight{
+    width: 95%;
 }
 
 
@@ -84,21 +133,21 @@ h1{
 
 .input_pwd{
     position: relative;
-    margin-top: 10px;
-    margin-bottom: 30px; 
+    margin-top: 2px;
+    margin-left: 50px;
 }
 .pwd{
-    
     display: block;
-    width: 100%;
+    width: 90%;
     color: white;
-    padding: 10px;
+    padding: 8px;
+    margin: 10px;
     font-size: 14px;
     border: none;
     border-bottom: 2px solid #ccc;
     outline: none;
     background-color: transparent;
-    color: #ccc; 
+    color: #ccc;
 }
 .pwd_label{
     position: absolute;
@@ -107,10 +156,9 @@ h1{
     font-size: 14px;
     color: rgba(204, 204, 204, 0);
     pointer-events: none;
-    transition: all 0.3s ease;  
+    transition: all 0.3s ease;
 }
-.input_hight{
-
+.input_pight{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -124,18 +172,68 @@ h1{
     font-size: 14px;
     color:rgb(252, 79, 79) ;
 }
-.pwd:focus +.pwd_label + .input_hight{
-    width: 105%;
+.pwd:focus + .pwd_label + .input_pight{
+    width: 95%;
 }
 
+
+
+
+
+
+.input_confirm{
+    position: relative;
+    margin-top: 2px;
+    margin-left: 50px;
+}
+.confirm{
+    display: block;
+    width: 90%;
+    color: white;
+    padding: 8px;
+    margin: 10px;
+    font-size: 14px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    background-color: transparent;
+    color: #ccc;
+}
+.confirm_label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    color: rgba(204, 204, 204, 0);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.input_cight{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: rgb(252, 79, 79);
+    transition: all 0.3s ease;
+}
+.confirm:focus + .confirm_label{
+    top: -10px;
+    font-size: 14px;
+    color:rgb(252, 79, 79) ;
+}
+.confirm:focus + .confirm_label + .input_cight{
+    width: 95%;
+}
 
 
 
 .btn{
     display: flex;
     justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 20px;
 }
-
 button {
     padding: 0.8em 1.8em;
     border: 2px solid rgb(252, 79, 79);
@@ -173,36 +271,3 @@ button:hover::before {
 button:hover {
     color: white;
 }
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
