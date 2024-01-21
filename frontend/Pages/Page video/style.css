@@ -1,0 +1,328 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+  p{
+    color: white;
+    font-size: 20px;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+
+  }
+  
+  /* Main video */
+  
+  .video-and-comments {
+    width: 90%;
+  }
+  
+  iframe {
+    width: 100%;
+    height: 600px;
+    border: 0;
+  }
+  
+  /* Information about video */
+  
+  .note-video {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0 15px 15px;
+  }
+  
+  .title-icon {
+    margin: 5px;
+  }
+  
+  
+  figure {
+    margin-left: 10px;
+  }
+  
+  .nomdustreameur{
+    display: inline;
+    position: relative;
+    bottom: 40px;
+  }
+  
+  .chat {
+    align-self: center;
+  }
+  
+  .chat-button {
+    background-color: rgb(87, 7, 7);
+    color: #fff;
+    padding: 5px 15px;
+    border: 1px solid #fff;
+  }
+  
+  .video-title {
+    margin-left: 15px;
+    font-size: 35px;
+    font-weight: 500;
+  }
+  
+  hr {
+    background-color: #eeeeee;
+    height: 1.5px;
+    border: none;
+  }
+  
+  /* Comment section */
+  
+  .comment {
+    margin-left: 5px;
+    margin-top: 30px;
+  }
+  
+  .comment-name {
+    margin-left: 10px;
+    font-weight: 1000;
+    color: white;
+  }
+  
+  .comment-text {
+    margin-left: 9px;
+  }
+  
+  .comment-buttons {
+    margin-left: 9px;
+  }
+  
+  .view-replies {
+    color: #008fff;
+    font-weight: 700;
+  }
+  /* Commentaire */
+  #TEXTE{
+    width: 20%;
+    height: 2vh;
+    display: flex; 
+  }
+
+  p{
+    color: white;
+  }
+
+
+  h1{
+    color: white;
+  }
+
+  .Stitre{
+    color: white;
+  }
+
+  /* Input container */
+.input-container {
+  position: relative;
+  margin: 20px;
+}
+
+/* Input field */
+.input-field {
+  display: block;
+  width: 100%;
+  padding: 25px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  background-color: transparent;
+  color: white;
+}
+
+/* Input label */
+.input-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  color: rgb(204, 204, 204);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Input highlight */
+.input-highlight {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: red;
+  transition: all 0.3s ease;
+}
+
+/* Input field:focus styles */
+.input-field:focus + .input-label {
+  top: -20px;
+  font-size: 15px;
+  color: red;
+}
+
+.input-field:focus + .input-label + .input-highlight {
+  width: 100%;
+}
+
+/* Note */
+
+.rating {
+  display:flex;
+  flex-direction: row-reverse;
+  gap: 0.3rem;
+  --stroke: #666;
+  --fill: #ffc73a;
+  margin-right: 80%;
+}
+
+.rating input {
+  appearance: unset;
+}
+
+.rating label {
+  cursor: pointer;
+}
+
+.rating svg {
+  width: 2rem;
+  height: 2rem;
+  overflow: visible;
+  fill: transparent;
+  stroke: var(--stroke);
+  stroke-linejoin: bevel;
+  stroke-dasharray: 12;
+  animation: idle 4s linear infinite;
+  transition: stroke 0.2s, fill 0.5s;
+}
+
+@keyframes idle {
+  from {
+    stroke-dashoffset: 24;
+  }
+}
+
+.rating label:hover svg {
+  stroke: var(--fill);
+}
+
+.rating input:checked ~ label svg {
+  transition: 0s;
+  animation: idle 4s linear infinite, yippee 0.75s backwards;
+  fill: var(--fill);
+  stroke: var(--fill);
+  stroke-opacity: 0;
+  stroke-dasharray: 0;
+  stroke-linejoin: miter;
+  stroke-width: 8px;
+}
+
+@keyframes yippee {
+  0% {
+    transform: scale(1);
+    fill: var(--fill);
+    fill-opacity: 0;
+    stroke-opacity: 1;
+    stroke: var(--stroke);
+    stroke-dasharray: 10;
+    stroke-width: 1px;
+    stroke-linejoin: bevel;
+  }
+
+  30% {
+    transform: scale(0);
+    fill: var(--fill);
+    fill-opacity: 0;
+    stroke-opacity: 1;
+    stroke: var(--stroke);
+    stroke-dasharray: 10;
+    stroke-width: 1px;
+    stroke-linejoin: bevel;
+  }
+
+  30.1% {
+    stroke: var(--fill);
+    stroke-dasharray: 0;
+    stroke-linejoin: miter;
+    stroke-width: 8px;
+  }
+
+  60% {
+    transform: scale(1.2);
+    fill: var(--fill);
+  }
+}
+
+button {
+  font-family: inherit;
+  font-size: 15px;
+  background: rgb(255, 53, 53);
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+  margin: 2px;
+}
+
+button span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+button svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+button:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+button:hover span {
+  transform: translateX(5em);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+.boutton-commentaire{
+  margin: 0px;
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 5px;
+}
+
+
+
+
+
+
+
+ 
+  
