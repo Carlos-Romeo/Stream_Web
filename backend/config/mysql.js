@@ -1,16 +1,15 @@
-const mysql = require("mysql2");
-//onst { Stream } = require("stream");
-require("dotenv").config();
-const dataBase = mysql.createConnection({
-    user: "root",
-    host: "localhost",
-    password: "",
-    database:"stream",
-});
+const mysql2 = require("mysql2");
 
-dataBase.connect((error) => {
-  if (error) throw error;
-  console.log("dataBase connected sucessfuly");
-});
 
-module.exports = dataBase;
+const dataBase = mysql2.createConnection({
+    user:"root",
+    host:"localhost",
+    password:"",
+    database:"stream"
+})
+
+dataBase.connect((error)=>{ 
+    if(error) throw error;
+    console.log('dataBase connected successfully');
+});
+module.exports = dataBase

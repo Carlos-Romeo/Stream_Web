@@ -1,25 +1,17 @@
 const express = require("express");
-const app = express();
+const userRoute = require("./Routes/UserRoute")
 const cors = require("cors")
-const port = 3000;
-const dataBase = require("./config/mysql");
-const RoutesUser = require("./Routes/UserRoute")
 
+const app = express()
 
-const bodyParser = require('body-parser');
-app.use(bodyParser.json());
-
-
-app.use(cors());
-app.use(express.json());
-
-
-app.get("/user", RoutesUser);
+app.use(cors())
+app.use(express.json())
 
 
 
-app.listen(port, ()=>{
-    console.log("connection reussi");
-});
+
+app.use("/user" , userRoute)
 
 
+
+app.listen(4000 || process.env.PORT)
