@@ -175,8 +175,7 @@ nav{
 .part_anime1{
     height: 100%;
     width: 18%;
-    border-radius: 30px;
-    border: solid 2px;
+
     background-color: blue;
     animation: animFilm 5s;
     z-index: 1;
@@ -190,8 +189,7 @@ nav{
 .part_anime2{
     height: 100%;
     width: 18%;
-    border-radius: 30px;
-    border: solid 2px;
+
     background-color: orange;
     animation: animFilm 3s;
     z-index: 4;
@@ -203,8 +201,7 @@ nav{
 .part_anime3{
     height: 100%;
     width: 18%;
-    border-radius: 30px;
-    border: solid 2px;
+
     background-color: red;
     animation: animFilm 6s;
     z-index: 3;
@@ -216,8 +213,7 @@ nav{
 .part_anime4{
     height: 100%;
     width: 18%;
-    border-radius: 30px;
-    border: solid 2px;
+
     background-color: yellow;
     animation: animFilm 4s;
     z-index: 5;
@@ -229,8 +225,7 @@ nav{
 .part_anime5{
     height: 100%;
     width: 18%;
-    border-radius: 30px;
-    border: solid 2px;
+
     background-color: green;
     animation: animFilm 7s;
     z-index: 2;

@@ -9,7 +9,7 @@ exports.signup = (req,res) => {
     console.log(req.body);
     
 
-    let insertUserQuery = "INSERT INTO `utilisateur` ( pseudo, email , passwordHash ) VALUES ( ?, ?, ?);"
+    let insertUserQuery = "INSERT INTO `utilisateur` ( Pseudo, email, password) VALUES (?,?,?)"
 
     bcrypt
     .hash(req.body.password, 5)
@@ -41,15 +41,15 @@ exports.signup = (req,res) => {
 exports.login = (req, res) => {
     console.log(req.body);
 
-    let selectUserQuery = "SELECT * FROM `utilisateur` WHERE pseudo=?";
-    dataBase.query(selectUserQuery, [req.body.pseudo], (error, result) => {
+    let selectUserQuery = "SELECT * FROM `utilisateur` WHERE email=?";
+    dataBase.query(selectUserQuery, [req.body.email], (error, result) => {
         if (error) {
             res.status(500).json({ error: "Internal server error ooooo" });
         } else if (result.length > 0) {
-            bcrypt.compare(req.body.password, result[0].PasswordHash)
+            bcrypt.compare(req.body.password, result[0].password)
                 .then((valid) => {
                     if (valid) {
-                        res.status(200).json({ message: "Login successful", id: result[0].speudo });
+                        res.status(200).json({ message: "Login successful", id: result[0].email });
                     } else {
                         res.status(401).json({ error: "Incorrect password" });
                     }

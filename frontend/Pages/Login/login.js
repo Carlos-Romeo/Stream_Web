@@ -1,29 +1,32 @@
+
+
 document.addEventListener('DOMContentLoaded', function () {
     // Écouteur d'événement sur la soumission du formulaire
-    document.querySelector('form').addEventListener('submit', function (event) {
-        event.preventDefault(); // Empêche le comportement par défaut du formulaire (envoi de la requête HTTP)
+    document.querySelector('#form').addEventListener('submit', function (e) {
+        e.preventDefault(); // Empêche le comportement par défaut du formulaire (envoi de la requête HTTP)
 
         // Récupération des valeurs des champs
         const email = document.querySelector('.email').value;
-        const PasswordHash = document.querySelector('.pwd').value;
+        const password = document.querySelector('.pwd').value;
 
         // Création d'un objet avec les données du formulaire
         const formData = {
-            email: username,
-            passwordHash: PasswordHash
+            email: email,
+            password: password
         };
 
         // Envoi des données au backend pour l'authentification
-        fetch("http://localhost:4000/user/login", {
+        fetch("http://localhost:5000/user/login", {
             method: 'POST', 
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(formData) 
+             body: JSON.stringify(formData) 
         })
         .then(response => {
-            if (response.headers) {
+            if (response.ok) {
                 console.log("ok");
+                console.log("c est bon")
                 // La requête a réussi (200 OK)
                 // Rediriger l'utilisateur vers la page d'accueil
                 window.location.href = '../Acceuil/Acceuil.html'; // Remplacez 'accueil.html' par le chemin de votre page d'accueil

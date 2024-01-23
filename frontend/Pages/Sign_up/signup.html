@@ -34,7 +34,7 @@
                         <br>
     
                         <section class="input_pwd">
-                            <input type="text" class="pwd" placeholder="Your Password" required>
+                            <input type="password" class="pwd" placeholder="Your Password" required>
                             <label for="pwd" id="pwd_label" class="pwd_label">Enter Password</label>
                             <span class="input_pight"></span>
                         </section>
@@ -66,59 +66,6 @@
         </section>
     </main>
 
-    <script src="./signup.js">
-      /*   let inputPseudo = document.querySelector(".pseudo");
-        let inputEmail = document.querySelector(".email");
-        let inputPassword = document.querySelector(".pwd");
-        let form = document.querySelector("#form");
-
-        let Pseudo = null;
-
-        inputPseudo.addEventListener("input", (e)=>{
-            Pseudo = e.target.value
-            console.log(Pseudo);
-        })
-
-
-
-        let Email = null;
-        inputEmail.addEventListener("input", (e)=>{
-            Email = e.target.value;
-            console.log(Email);
-        })
-
-        
-        let Password = null;
-
-        inputPassword.addEventListener("input", (e)=>{
-            Password = e.target.value
-            console.log(Password);
-        })
-
-
-        form.addEventListener("submit", async (e)=>{
-            e.preventDefault();
-            let dataForm = { pseudo : Pseudo, email: Email, password : Password }
-        console.log(dataForm);
-/*         axios
-            .post("https://localhost:3000/user/signup", dataForm)
-            .then((res) => {
-              console.log(res.data);
-            })
-            .catch((error) => {
-              console.log(error);
-            }) */
-
-/*             try {
-        const res = await axios.post("https://localhost:3000/user/signup", dataForm);
-        console.log(res.data);
-        } catch (error) {
-        console.log(error);
-    }
-
-        })
-
-  */
-    </script>
+    <script src="./signup.js"></script>
 </body>
 </html>  
