@@ -14,7 +14,7 @@
 
                 <h1>SIGNUP</h1>
 
-                <form action="">
+                <form action="" id="form">
 
                     <section class="content_input">
 
@@ -47,7 +47,7 @@
                         </section>
 
                         <section class="btn">
-                            <button><a href="../Acceuil/Acceuil.html">signup</a> </button>
+                            <button type="submit"><a href="../Acceuil/Acceuil.html">signup</a> </button>
                         </section>
 
                         
@@ -65,5 +65,60 @@
 
         </section>
     </main>
+
+    <script src="./signup.js">
+      /*   let inputPseudo = document.querySelector(".pseudo");
+        let inputEmail = document.querySelector(".email");
+        let inputPassword = document.querySelector(".pwd");
+        let form = document.querySelector("#form");
+
+        let Pseudo = null;
+
+        inputPseudo.addEventListener("input", (e)=>{
+            Pseudo = e.target.value
+            console.log(Pseudo);
+        })
+
+
+
+        let Email = null;
+        inputEmail.addEventListener("input", (e)=>{
+            Email = e.target.value;
+            console.log(Email);
+        })
+
+        
+        let Password = null;
+
+        inputPassword.addEventListener("input", (e)=>{
+            Password = e.target.value
+            console.log(Password);
+        })
+
+
+        form.addEventListener("submit", async (e)=>{
+            e.preventDefault();
+            let dataForm = { pseudo : Pseudo, email: Email, password : Password }
+        console.log(dataForm);
+/*         axios
+            .post("https://localhost:3000/user/signup", dataForm)
+            .then((res) => {
+              console.log(res.data);
+            })
+            .catch((error) => {
+              console.log(error);
+            }) */
+
+/*             try {
+        const res = await axios.post("https://localhost:3000/user/signup", dataForm);
+        console.log(res.data);
+        } catch (error) {
+        console.log(error);
+    }
+
+        })
+
+  */
+    </script>
 </body>
-</html>
+</html>  
