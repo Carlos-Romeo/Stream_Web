@@ -1,0 +1,35 @@
+
+
+body{
+    background-color: black;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25vh;
+}
+
+h2{
+    color: red;
+}
+
+.formulaire{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3vh;
+    padding: 5vh;
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+form article{
+    display: flex;
+    flex-direction: column;
+}
