@@ -9,7 +9,7 @@ exports.signup = (req,res) => {
     console.log(req.body);
     
 
-    let insertUserQuery = "INSERT INTO `utilisateur` ( Pseudo, email, password) VALUES (?,?,?)"
+    let insertUserQuery = "INSERT INTO `utilisateur` ( Pseudo, email, password) VALUES (?,?,?)";
 
     bcrypt
     .hash(req.body.password, 5)

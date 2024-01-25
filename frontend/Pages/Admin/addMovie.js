@@ -10,12 +10,17 @@ document.addEventListener('DOMContentLoaded', function () {
         const Duree = document.getElementById('Duree').value;
 
         // Création d'un objet avec les données du formulaire
-        const filmData = {
-            titre: titre,
-            Duree: Duree,
-            chemin: chemin,
-        };
+        const filmData = { 
+            titre : titre,
+            Duree : Duree,
+            chemin : chemin,
+        }
+
+
         console.log(filmData)
+
+
+
         // Vous pouvez maintenant envoyer ces données au serveur via une requête AJAX, par exemple
         // Exemple avec fetch :
         fetch("http://localhost:5000/film/film", {
